@@ -2,10 +2,10 @@ from googleapiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
 import gspread
-from constants import CREDENTIALS_URL, READ_WRITE_SCOPES
+from constants import CREDENTIALS_URL
 
-class ProjectManagementBase:
-    def __init__(self, scope=READ_WRITE_SCOPES):
+class CredentialsBase:
+    def __init__(self, scope):
         self.__creds = None
         self.__scope = scope
         self.__setup()

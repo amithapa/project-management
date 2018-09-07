@@ -1,0 +1,2 @@
+class InvalidSpreadSheetId(Exception):
+    pass
