@@ -4,7 +4,7 @@ from exceptions import InvalidSpreadSheetId
 import gspread
 
 class SpreadSheetServiceBase(CredentialsBase):
-    def __init__(self, scope: str=SpreadSheetScope.READONLY_SCOPES):
+    def __init__(self, scope: list=[SpreadSheetScope.READONLY_SCOPES]):
         CredentialsBase.__init__(self, scope)
         self.__gs_authorize: gspread.Client = None
         self.__spreadsheet: gspread.Spreadsheet = None
